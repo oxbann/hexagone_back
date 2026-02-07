@@ -54,7 +54,7 @@ if (authRoutes) app.use('/api/auth', authRoutes);
 if (playersRoutes) app.use('/api/players', playersRoutes);
 if (adminRoutes) app.use('/api/admin', adminRoutes);
 
-const PORT = process.env.PORT || 4000;
+const PORT = Number(process.env.PORT) || 3000;
 const HOST = '0.0.0.0';
 app.listen(PORT, HOST, () => {
   console.log(`Serveur backend lancé sur ${HOST}:${PORT}`);
